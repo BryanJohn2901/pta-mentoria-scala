@@ -40,29 +40,6 @@
     </script>
 
     <style type="text/tailwindcss">
-        @layer components {
-            .btn-glow {
-                @apply shadow-[0_0_20px_rgba(255,100,50,0.3)] hover:shadow-[0_0_35px_rgba(255,100,50,0.5)];
-            }
-        }
-        
-        @keyframes shine {
-            100% { left: 125%; }
-        }
-        .animate-shine {
-            position: relative;
-            overflow: hidden;
-        }
-        .animate-shine::after {
-            content: "";
-            position: absolute;
-            top: -50%; left: -60%;
-            width: 20%; height: 200%;
-            background: rgba(255, 255, 255, 0.2);
-            transform: rotate(30deg);
-            transition: none;
-            animation: shine 3s infinite;
-        }
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -114,20 +91,10 @@
         input.hover-input:hover, input.hover-input:focus { border-color: rgba(255,100,50,0.4); }
 
         /* ==============================================================
-           NOVAS INTERAÇÕES ESPECIAIS (SPOTLIGHT, MAGNETIC & TILT) 
+           NOVAS INTERAÇÕES ESPECIAIS (SPOTLIGHT & TILT) 
            ============================================================== */
         
-        /* 1. Botão Magnético */
-        .magnetic-btn {
-            transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s;
-            will-change: transform;
-        }
-        .magnetic-btn:active {
-            transform: scale(0.95) !important;
-            transition: transform 0.08s;
-        }
-
-        /* 2. Efeito Spotlight (Lanterna) nos Cards */
+        /* Efeito Spotlight (Lanterna) nos Cards */
         .spotlight-card {
             position: relative;
             background: rgba(22, 22, 22, 1);
@@ -157,7 +124,7 @@
             z-index: 10;
         }
 
-        /* 3. Card 3D Tilt (Oferta) */
+        /* Card 3D Tilt (Oferta) */
         .tilt-card {
             transform-style: preserve-3d;
             transition: transform 0.2s ease;
@@ -199,7 +166,7 @@
                     Uma mentoria feita por quem vive o jogo do fitness e fatura alto no digital. O ecossistema exato de conteúdo, vendas e posicionamento premium para transformar seguidores em clientes de alto valor — mesmo que você comece do zero.
                 </p>
                 <div class="flex flex-col items-center md:items-start gap-6 animate-fade-in-up ani-delay-3 opacity-0">
-                    <a href="#oferta" class="open-popup magnetic-btn btn-glow animate-shine bg-sc-orange text-white text-base md:text-lg font-black px-12 py-5 rounded-xl uppercase tracking-tight flex justify-center items-center gap-3 shadow-2xl w-full md:w-auto">
+                    <a href="#oferta" class="open-popup bg-sc-orange text-white text-sm md:text-base font-bold px-6 py-4 md:px-8 md:py-3 rounded-lg uppercase flex justify-center items-center gap-2 w-full md:w-auto hover:bg-[#e55020] transition-colors duration-300">
                         FAZER INSCRIÇÃO AGORA <i class="fa-solid fa-arrow-right"></i>
                     </a>
                     <div class="flex items-center justify-center md:justify-start gap-2 text-sm font-medium text-sc-gray bg-sc-161/50 backdrop-blur px-4 py-2 rounded-lg border border-sc-313/50">
@@ -235,9 +202,11 @@
                         </span>
                         <p class="text-white font-medium italic text-left">Eles dominaram o jogo do digital. Algo que nunca te ensinaram na faculdade.</p>
                     </div>
-                    <a href="#oferta" class="open-popup magnetic-btn mt-8 flex justify-center items-center gap-2 bg-sc-orange/90 text-white text-sm font-bold px-6 py-3 rounded-lg uppercase w-full md:w-fit">
-                        QUERO MINHA VAGA <i class="fa-solid fa-arrow-right"></i>
-                    </a>
+                    <div class="mt-8 flex justify-center md:justify-start">
+                        <a href="#oferta" class="open-popup bg-sc-orange text-white text-sm md:text-base font-bold px-6 py-4 md:px-8 md:py-3 rounded-lg uppercase flex justify-center items-center gap-2 w-full md:w-auto hover:bg-[#e55020] transition-colors duration-300">
+                            QUERO MINHA VAGA <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
 
                 <div class="relative group p-[1px] rounded-[28px] bg-gradient-to-br from-sc-orange/50 via-sc-orange/20 to-sc-purple/40 opacity-90 group-hover:opacity-100 transition-all duration-500 shadow-2xl scroll-reveal-right scroll-delay-2 hover-lift hover-card">
@@ -252,9 +221,11 @@
                             <p>A <span class="text-white font-bold text-sc-orange">Mentoria SCALA</span> é o seu passaporte para sair da estagnação. Uma metodologia construída por quem vive as trincheiras — e sabe exatamente como atrair o público certo e vender todos os dias com clareza e estratégia.</p>
                             <p>Garanta sua vaga na próxima turma e receba mais de R$10 mil em conhecimento e estratégias por um valor especial de lançamento.</p>
                         </div>
-                        <a href="#oferta" class="open-popup mt-6 flex justify-center items-center gap-2 border border-sc-orange text-sc-orange hover:bg-sc-orange hover:text-white text-sm font-bold px-6 py-3 rounded-lg uppercase transition-colors w-full md:w-fit">
-                            GARANTIR VAGA <i class="fa-solid fa-arrow-right"></i>
-                        </a>
+                        <div class="mt-6 flex justify-center md:justify-start">
+                            <a href="#oferta" class="open-popup bg-sc-orange text-white text-sm md:text-base font-bold px-6 py-4 md:px-8 md:py-3 rounded-lg uppercase flex justify-center items-center gap-2 w-full md:w-auto hover:bg-[#e55020] transition-colors duration-300">
+                                GARANTIR VAGA <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -319,8 +290,8 @@
                 </div>
             </div>
 
-            <div class="text-center mt-14">
-                <a href="#oferta" class="open-popup magnetic-btn btn-glow flex justify-center items-center gap-2 bg-sc-orange text-white font-bold px-8 py-4 rounded-xl uppercase text-sm w-full md:w-auto">
+            <div class="mt-14 flex justify-center md:justify-start">
+                <a href="#oferta" class="open-popup bg-sc-orange text-white text-sm md:text-base font-bold px-6 py-4 md:px-8 md:py-3 rounded-lg uppercase flex justify-center items-center gap-2 w-full md:w-auto hover:bg-[#e55020] transition-colors duration-300">
                     ACESSAR CONTEÚDO COMPLETO <i class="fa-solid fa-arrow-right"></i>
                 </a>
             </div>
@@ -363,8 +334,8 @@
                     <p class="text-sc-313 text-sm leading-relaxed">Dois encontros presenciais para networking, construção de parcerias de alto valor e alinhamento de rota.</p>
                 </div>
             </div>
-            <div class="text-center mt-14">
-                <a href="#oferta" class="open-popup magnetic-btn flex justify-center items-center gap-2 bg-sc-orange text-white font-bold px-8 py-4 rounded-xl uppercase text-sm border-2 border-sc-orange w-full md:w-auto">
+            <div class="mt-14 flex justify-center md:justify-start">
+                <a href="#oferta" class="open-popup bg-sc-orange text-white text-sm md:text-base font-bold px-6 py-4 md:px-8 md:py-3 rounded-lg uppercase flex justify-center items-center gap-2 w-full md:w-auto hover:bg-[#e55020] transition-colors duration-300">
                     VER CONDIÇÕES <i class="fa-solid fa-arrow-right"></i>
                 </a>
             </div>
@@ -385,7 +356,7 @@
                 
                 <div class="relative w-full mx-auto animate-on-scroll scroll-delay-1">
                     <div class="bg-sc-darkcard rounded-[32px] border border-white/[0.03] p-8 pt-64 lg:p-14 lg:pl-[440px] relative flex flex-col justify-center min-h-[440px] shadow-2xl hover-mentor-card transition-all duration-500">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-[-32px] lg:top-1/2 lg:-translate-y-1/2 w-[calc(100%-48px)] max-w-[280px] lg:max-w-none lg:w-[400px] h-[380px] min-h-[380px] lg:h-[500px] rounded-[24px] overflow-hidden shadow-2xl -mt-16 lg:mt-0 z-10 border border-white/5 group bg-black flex items-center justify-center">
+                        <div class="absolute top-0 left-6 lg:left-[-32px] lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-0 w-[calc(100%-48px)] max-w-[280px] lg:max-w-none lg:w-[400px] h-[380px] min-h-[380px] lg:h-[500px] rounded-[24px] overflow-hidden shadow-2xl -mt-16 lg:mt-0 z-10 border border-white/5 group bg-black flex items-center justify-center">
                             <img src="img/andre.webp" class="w-full h-full object-contain object-top lg:object-center lg:object-cover grayscale opacity-90 hover-mentor-img" alt="André Albuquerque">
                             <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent opacity-90"></div>
                         </div>
@@ -423,7 +394,7 @@
 
                 <div class="relative w-full mx-auto animate-on-scroll scroll-delay-2">
                     <div class="bg-sc-darkcard rounded-[32px] border border-white/[0.03] p-8 pt-64 lg:p-14 lg:pl-[440px] relative flex flex-col justify-center min-h-[440px] shadow-2xl hover-mentor-card transition-all duration-500">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-[-32px] lg:top-1/2 lg:-translate-y-1/2 w-[calc(100%-48px)] max-w-[280px] lg:max-w-none lg:w-[400px] h-[380px] min-h-[380px] lg:h-[500px] rounded-[24px] overflow-hidden shadow-2xl -mt-16 lg:mt-0 z-10 border border-white/5 group bg-black flex items-center justify-center">
+                        <div class="absolute top-0 left-6 lg:left-[-32px] lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-0 w-[calc(100%-48px)] max-w-[280px] lg:max-w-none lg:w-[400px] h-[380px] min-h-[380px] lg:h-[500px] rounded-[24px] overflow-hidden shadow-2xl -mt-16 lg:mt-0 z-10 border border-white/5 group bg-black flex items-center justify-center">
                             <img src="img/rafael.webp" class="w-full h-full object-contain object-top lg:object-center lg:object-cover grayscale opacity-90 hover-mentor-img" alt="Rafael Tonietto">
                             <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent opacity-90"></div>
                         </div>
@@ -461,7 +432,7 @@
 
                 <div class="relative w-full mx-auto animate-on-scroll scroll-delay-3">
                     <div class="bg-sc-darkcard rounded-[32px] border border-white/[0.03] p-8 pt-64 lg:p-14 lg:pl-[440px] relative flex flex-col justify-center min-h-[440px] shadow-2xl hover-mentor-card transition-all duration-500">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-[-32px] lg:top-1/2 lg:-translate-y-1/2 w-[calc(100%-48px)] max-w-[280px] lg:max-w-none lg:w-[400px] h-[380px] min-h-[380px] lg:h-[500px] rounded-[24px] overflow-hidden shadow-2xl -mt-16 lg:mt-0 z-10 border border-white/5 group bg-black flex items-center justify-center">
+                        <div class="absolute top-0 left-6 lg:left-[-32px] lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-0 w-[calc(100%-48px)] max-w-[280px] lg:max-w-none lg:w-[400px] h-[380px] min-h-[380px] lg:h-[500px] rounded-[24px] overflow-hidden shadow-2xl -mt-16 lg:mt-0 z-10 border border-white/5 group bg-black flex items-center justify-center">
                             <img src="img/julio.webp" class="w-full h-full object-contain object-top lg:object-center lg:object-cover grayscale opacity-90 hover-mentor-img" alt="Julio Muniz">
                             <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent opacity-90"></div>
                         </div>
@@ -556,9 +527,11 @@
                         <p class="text-white font-medium">Criando ecossistemas que funcionam 24h, enquanto treinam, dormem ou viajam.</p>
                     </li>
                 </ul>
-                <a href="#oferta" class="open-popup magnetic-btn mt-8 flex justify-center items-center gap-2 bg-sc-orange text-white font-bold px-8 py-4 rounded-xl uppercase text-sm w-full md:w-auto">
-                    QUERO ESSES RESULTADOS <i class="fa-solid fa-arrow-right"></i>
-                </a>
+                <div class="mt-8 flex justify-center md:justify-start">
+                    <a href="#oferta" class="open-popup bg-sc-orange text-white text-sm md:text-base font-bold px-6 py-4 md:px-8 md:py-3 rounded-lg uppercase flex justify-center items-center gap-2 w-full md:w-auto hover:bg-[#e55020] transition-colors duration-300">
+                        QUERO ESSES RESULTADOS <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
             <div class="relative group scroll-reveal-right scroll-delay-2 overflow-hidden rounded-3xl">
                 <div class="absolute -inset-1 bg-gradient-to-br from-sc-orange/20 to-sc-purple/20 rounded-[28px] blur opacity-40 group-hover:opacity-70 transition-opacity duration-500"></div>
@@ -596,9 +569,11 @@
                             As vagas são limitadas e a mentoria começa dia 02 de abril. Clique abaixo e fale com a equipe para garantir sua vaga agora mesmo.
                         </p>
 
-                        <a href="#oferta" class="open-popup magnetic-btn btn-glow animate-shine flex items-center justify-center gap-2 bg-sc-orange text-white text-xl font-black py-6 px-12 rounded-xl uppercase tracking-widest w-full md:w-auto">
-                            FAZER INSCRIÇÃO AGORA <i class="fa-solid fa-arrow-right"></i>
-                        </a>
+                        <div class="flex justify-center md:justify-start mt-6">
+                            <a href="#oferta" class="open-popup bg-sc-orange text-white text-sm md:text-base font-bold px-6 py-4 md:px-8 md:py-3 rounded-lg uppercase flex justify-center items-center gap-2 w-full md:w-auto hover:bg-[#e55020] transition-colors duration-300">
+                                FAZER INSCRIÇÃO AGORA <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -642,7 +617,7 @@
                     </div>
                 </div>
                 
-                <button type="submit" class="w-full magnetic-btn btn-glow bg-sc-orange text-white font-black py-4 rounded-xl uppercase tracking-widest mt-6 flex items-center justify-center gap-2">
+                <button type="submit" class="w-full bg-sc-orange text-white font-bold py-4 rounded-lg uppercase mt-6 flex items-center justify-center gap-2 hover:bg-[#e55020] transition-colors duration-300">
                     Continuar para Checkout <i class="fa-solid fa-lock text-sm"></i>
                 </button>
                 <p class="text-center text-[10px] text-sc-313 uppercase font-bold tracking-wider mt-4">Suas informações estão seguras.</p>
@@ -683,22 +658,7 @@
                 });
             });
 
-            // 4. Efeito Magnético nos Botões (Botão segue o mouse levemente)
-            document.querySelectorAll('.magnetic-btn').forEach(btn => {
-                btn.addEventListener('mousemove', e => {
-                    const rect = btn.getBoundingClientRect();
-                    // Calcula o centro do botão
-                    const x = e.clientX - rect.left - rect.width / 2;
-                    const y = e.clientY - rect.top - rect.height / 2;
-                    // Move o botão um pouquinho na direção do mouse (20% da força)
-                    btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px) scale(1.02)`;
-                });
-                btn.addEventListener('mouseleave', () => {
-                    btn.style.transform = 'translate(0px, 0px) scale(1)';
-                });
-            });
-
-            // 5. Card 3D Tilt (Inclinação interativa na Oferta Final)
+            // 4. Card 3D Tilt (Inclinação interativa na Oferta Final)
             document.querySelectorAll('.tilt-card').forEach(card => {
                 card.addEventListener('mousemove', e => {
                     const rect = card.getBoundingClientRect();
@@ -717,7 +677,7 @@
                 });
             });
 
-            // 6. Lógica do Popup (Modal)
+            // 5. Lógica do Popup (Modal)
             const popup = document.getElementById('lead-popup');
             const popupContent = document.getElementById('popup-content');
             
@@ -742,7 +702,7 @@
                 }, 650);
             });
 
-            // 7. Lógica de Envio de Dados (Webhook + UTMs)
+            // 6. Lógica de Envio de Dados (Webhook + UTMs)
             function getUTMs() {
                 const params = new URLSearchParams(window.location.search);
                 return {
