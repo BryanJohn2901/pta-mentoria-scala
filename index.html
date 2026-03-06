@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentoria SCALA FITNESS | Mude sua Realidade no Digital</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sc: {
+                            111: '#111111',
+                            141: '#141414',
+                            161: '#161616',
+                            313: '#313131',
+                            purple: '#610981',
+                            gray: '#8B8883',
+                            light: '#A8A8A8',
+                            orange: '#FF6432',
+                            f5: '#F5F5F5',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style type="text/tailwindcss">
+        @layer components {
+            .btn-glow {
+                @apply shadow-[0_0_20px_rgba(255,100,50,0.3)] hover:shadow-[0_0_35px_rgba(255,100,50,0.5)];
+            }
+        }
+        
+        /* Efeito de brilho infinito no botão */
+        @keyframes shine {
+            100% { left: 125%; }
+        }
+        .animate-shine {
+            position: relative;
+            overflow: hidden;
+        }
+        .animate-shine::after {
+            content: "";
+            position: absolute;
+            top: -50%; left: -60%;
+            width: 20%; height: 200%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: rotate(30deg);
+            transition: none;
+            animation: shine 3s infinite;
+        }
+    </style>
+</head>
+
+<body class="bg-sc-111 text-sc-light font-sans antialiased">
+
+    <header class="fixed top-0 left-0 w-full z-[1000] bg-sc-111/95 backdrop-blur-md border-b border-sc-313">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="#hero" class="text-2xl font-black text-white tracking-tighter flex items-center gap-2">
+                <i class="fa-solid fa-arrow-trend-up text-sc-orange"></i> SCALA
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#problema" class="text-sm font-medium hover:text-sc-orange transition-colors">O Problema</a>
+                <a href="#aprender" class="text-sm font-medium hover:text-sc-orange transition-colors">Conteúdo</a>
+                <a href="#autoridade" class="text-sm font-medium hover:text-sc-orange transition-colors">Mentores</a>
+                <a href="#resultados" class="text-sm font-medium hover:text-sc-orange transition-colors">Resultados</a>
+            </nav>
+
+            <a href="#oferta" class="bg-sc-orange text-white text-xs font-bold px-6 py-3 rounded-md uppercase hover:bg-white hover:text-sc-orange transition-all">
+                Fazer Inscrição
+            </a>
+        </div>
+    </header>
+
+    <section id="hero" class="relative min-h-[90vh] flex items-center pt-32 pb-24 overflow-hidden text-center bg-sc-111">
+        <!-- Background image com overlay escuro -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1920&auto=format&fit=crop" 
+                 class="w-full h-full object-cover" alt="" aria-hidden="true">
+            <div class="absolute inset-0 bg-sc-111/85"></div>
+        </div>
+        <div class="absolute top-[20%] left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-sc-orange/15 rounded-full blur-[120px] pointer-events-none z-[1]"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <span class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-sc-161/90 backdrop-blur border border-sc-313 text-sc-orange text-xs font-bold uppercase tracking-widest mb-8 shadow-2xl">
+                <i class="fa-solid fa-medal"></i> Mentoria Scala Fitness
+            </span>
+            
+            <h1 class="text-white text-4xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.1] max-w-5xl mx-auto mb-8">
+                O Domínio para se Tornar o <span class="text-sc-orange">Treinador Mais Procurado</span> do Digital.
+            </h1>
+            
+            <p class="text-sc-light text-lg md:text-xl max-w-3xl mx-auto mb-12 leading-relaxed">
+                O ecossistema exato de conteúdo, vendas e posicionamento premium para você transformar seguidores em clientes de alto valor — mesmo começando do zero.
+            </p>
+            
+            <div class="flex flex-col items-center gap-6">
+                <a href="#oferta" class="btn-glow animate-shine bg-sc-orange text-white text-lg font-black px-12 py-6 rounded-xl uppercase tracking-tight transition-transform hover:scale-105 active:scale-95 w-full max-w-md">
+                    Fazer Inscrição Agora <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+                <div class="flex items-center justify-center gap-2 text-sm font-semibold text-sc-gray">
+                    <i class="fa-solid fa-circle-exclamation text-sc-orange"></i>
+                    Vagas limitadas. Início em 02 de Abril.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="problema" class="relative py-28 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-sc-141 via-sc-111 to-sc-161"></div>
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-sc-orange/5 rounded-full blur-[150px] -translate-y-1/2 translate-x-1/2"></div>
+        <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-sc-purple/10 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sc-orange/10 border border-sc-orange/30 text-sc-orange text-xs font-bold uppercase tracking-widest">A Realidade do Mercado</span>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-stretch">
+                <div class="flex flex-col">
+                    <h2 class="text-white text-3xl md:text-5xl font-black mb-8 leading-tight tracking-tight text-left">
+                        Até quando você vai esgotar sua saúde para pagar <span class="text-sc-orange relative"><span class="relative z-10">as contas?</span><span class="absolute bottom-1 left-0 w-full h-2 bg-sc-orange/30 -z-0"></span></span>
+                    </h2>
+                    <div class="space-y-5 text-sc-light text-lg text-left flex-grow">
+                        <p class="leading-relaxed">A verdade nua e crua: os melhores profissionais não são, necessariamente, os mais ricos.</p>
+                        <p class="leading-relaxed">Você domina a biomecânica, mas continua com a agenda travada e a conta bancária estagnada enquanto "treinadores medianos" faturam alto.</p>
+                    </div>
+                    <div class="mt-8 p-6 rounded-2xl bg-sc-161/80 backdrop-blur border border-sc-313/80 flex gap-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]">
+                        <span class="flex-shrink-0 w-10 h-10 rounded-xl bg-sc-orange/20 flex items-center justify-center">
+                            <i class="fa-solid fa-triangle-exclamation text-sc-orange"></i>
+                        </span>
+                        <p class="text-white font-medium italic text-left">Eles dominaram o "jogo do digital", algo que nunca te ensinaram na faculdade.</p>
+                    </div>
+                </div>
+
+                <div class="relative group p-[1px] rounded-[28px] bg-gradient-to-br from-sc-orange/50 via-sc-orange/20 to-sc-purple/40 opacity-90 group-hover:opacity-100 transition-opacity shadow-2xl">
+                    <div class="relative h-full bg-sc-161/95 backdrop-blur p-8 md:p-10 rounded-[27px] border border-sc-313/50">
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="w-12 h-12 rounded-xl bg-sc-orange/20 flex items-center justify-center">
+                                <i class="fa-solid fa-key text-sc-orange text-xl"></i>
+                            </span>
+                            <h3 class="text-white text-2xl font-black">A Virada de Chave</h3>
+                        </div>
+                        <div class="space-y-5 text-sc-light leading-relaxed text-left">
+                            <p>Chega de implorar por alunos ou dar descontos na sua hora-aula. A <span class="text-white font-bold text-sc-orange">Mentoria SCALA</span> é o seu passaporte para sair da estagnação.</p>
+                            <p>Uma metodologia construída por quem vive as trincheiras e sabe como atrair o público certo e vender todos os dias.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="aprender" class="relative py-28 bg-sc-111 overflow-hidden">
+        <div class="absolute top-1/2 left-0 w-96 h-96 bg-sc-orange/5 rounded-full blur-[120px] -translate-y-1/2 -translate-x-1/2"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-20">
+                <span class="inline-block text-sc-gray text-xs font-bold uppercase tracking-widest mb-4">Conteúdo</span>
+                <h2 class="text-white text-3xl md:text-5xl font-black tracking-tight">O QUE VOCÊ VAI <span class="text-sc-orange">APRENDER</span></h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+                <div class="group relative p-8 md:p-10 rounded-3xl bg-gradient-to-b from-sc-161 to-sc-141 border border-sc-313/80 text-left hover:border-sc-orange/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_-15px_rgba(255,100,50,0.15)]">
+                    <div class="w-14 h-14 flex items-center justify-center rounded-2xl bg-sc-orange/10 border border-sc-orange/20 mb-6 group-hover:bg-sc-orange group-hover:border-sc-orange transition-all duration-300">
+                        <i class="fa-solid fa-bullhorn text-sc-orange group-hover:text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-white text-xl font-bold mb-3">Conteúdo que Converte</h3>
+                    <p class="text-sm leading-relaxed text-sc-gray">Domine a arte de transformar seguidores em fãs e compradores ativos.</p>
+                </div>
+                <div class="group relative p-8 md:p-10 rounded-3xl bg-gradient-to-b from-sc-161 to-sc-141 border border-sc-313/80 text-left hover:border-sc-orange/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_-15px_rgba(255,100,50,0.15)]">
+                    <div class="w-14 h-14 flex items-center justify-center rounded-2xl bg-sc-orange/10 border border-sc-orange/20 mb-6 group-hover:bg-sc-orange group-hover:border-sc-orange transition-all duration-300">
+                        <i class="fa-solid fa-rocket text-sc-orange group-hover:text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-white text-xl font-bold mb-3">Estratégias de Lançamento</h3>
+                    <p class="text-sm leading-relaxed text-sc-gray">Execute campanhas de alta lucratividade para suas consultorias.</p>
+                </div>
+                <div class="group relative p-8 md:p-10 rounded-3xl bg-gradient-to-b from-sc-161 to-sc-141 border border-sc-313/80 text-left hover:border-sc-orange/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_-15px_rgba(255,100,50,0.15)]">
+                    <div class="w-14 h-14 flex items-center justify-center rounded-2xl bg-sc-orange/10 border border-sc-orange/20 mb-6 group-hover:bg-sc-orange group-hover:border-sc-orange transition-all duration-300">
+                        <i class="fa-solid fa-arrows-spin text-sc-orange group-hover:text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-white text-xl font-bold mb-3">Vendas no Automático</h3>
+                    <p class="text-sm leading-relaxed text-sc-gray">Implemente funis que vendem seus serviços 24 horas por dia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="formato" class="relative py-28 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-sc-f5 to-white"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-20">
+                <span class="inline-block text-sc-313 text-xs font-bold uppercase tracking-widest mb-4">Como funciona</span>
+                <h2 class="text-sc-111 text-3xl md:text-5xl font-black tracking-tight">FORMATO DA <span class="text-sc-orange">MENTORIA</span></h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="group bg-white p-8 rounded-3xl border border-gray-100 text-left shadow-lg shadow-black/5 hover:shadow-xl hover:shadow-sc-orange/10 hover:-translate-y-2 hover:border-sc-orange/20 transition-all duration-300">
+                    <span class="inline-flex w-14 h-14 items-center justify-center rounded-2xl bg-sc-orange/10 text-sc-orange mb-6 group-hover:bg-sc-orange group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-calendar-check text-2xl"></i>
+                    </span>
+                    <h3 class="text-sc-111 text-lg font-bold mb-3">Encontros ao vivo</h3>
+                    <p class="text-sc-313 text-sm leading-relaxed">Aulas quinzenais com os mentores para ajustes de rota e direcionamento.</p>
+                </div>
+                <div class="group bg-white p-8 rounded-3xl border border-gray-100 text-left shadow-lg shadow-black/5 hover:shadow-xl hover:shadow-sc-orange/10 hover:-translate-y-2 hover:border-sc-orange/20 transition-all duration-300">
+                    <span class="inline-flex w-14 h-14 items-center justify-center rounded-2xl bg-sc-orange/10 text-sc-orange mb-6 group-hover:bg-sc-orange group-hover:text-white transition-colors">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
+                    </span>
+                    <h3 class="text-sc-111 text-lg font-bold mb-3">Suporte de Elite</h3>
+                    <p class="text-sc-313 text-sm leading-relaxed">Grupo exclusivo de networking com os maiores nomes do mercado.</p>
+                </div>
+                <div class="group bg-white p-8 rounded-3xl border border-gray-100 text-left shadow-lg shadow-black/5 hover:shadow-xl hover:shadow-sc-orange/10 hover:-translate-y-2 hover:border-sc-orange/20 transition-all duration-300">
+                    <span class="inline-flex w-14 h-14 items-center justify-center rounded-2xl bg-sc-orange/10 text-sc-orange mb-6 group-hover:bg-sc-orange group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-user-doctor text-2xl"></i>
+                    </span>
+                    <h3 class="text-sc-111 text-lg font-bold mb-3">Raio-X Individual</h3>
+                    <p class="text-sc-313 text-sm leading-relaxed">Sessões estratégicas focadas no seu modelo de negócio específico.</p>
+                </div>
+                <div class="group bg-white p-8 rounded-3xl border border-gray-100 text-left shadow-lg shadow-black/5 hover:shadow-xl hover:shadow-sc-orange/10 hover:-translate-y-2 hover:border-sc-orange/20 transition-all duration-300">
+                    <span class="inline-flex w-14 h-14 items-center justify-center rounded-2xl bg-sc-orange/10 text-sc-orange mb-6 group-hover:bg-sc-orange group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-users text-2xl"></i>
+                    </span>
+                    <h3 class="text-sc-111 text-lg font-bold mb-3">Imersão Presencial</h3>
+                    <p class="text-sc-313 text-sm leading-relaxed">Eventos focados em networking e construção de parcerias de alto valor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="autoridade" class="relative py-28 bg-sc-111 overflow-hidden">
+        <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-sc-purple/10 rounded-full blur-[130px] translate-y-1/2 translate-x-1/2"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-20">
+                <span class="inline-block text-sc-gray text-xs font-bold uppercase tracking-widest mb-4">Mentores</span>
+                <h2 class="text-white text-3xl md:text-5xl font-black mb-4 tracking-tight">Conheça quem vai guiar seu <span class="text-sc-orange">crescimento.</span></h2>
+                <p class="text-sc-gray text-lg max-w-2xl mx-auto">Um conselho de especialistas focado no seu negócio.</p>
+            </div>
+            
+            <div class="space-y-8">
+                <div class="group flex flex-col lg:flex-row items-center gap-10 lg:gap-14 p-8 md:p-10 rounded-[32px] bg-gradient-to-br from-sc-161/80 to-sc-141/80 border border-sc-313/80 backdrop-blur hover:border-sc-orange/30 transition-all duration-300 hover:shadow-[0_25px_60px_-15px_rgba(0,0,0,0.4)]">
+                    <div class="w-full lg:w-[340px] flex-shrink-0">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1374&auto=format&fit=crop" 
+                             class="w-full aspect-[4/5] object-cover rounded-2xl ring-2 ring-sc-313/50 shadow-2xl group-hover:ring-sc-orange/30 transition-all" alt="André Albuquerque">
+                    </div>
+                    <div class="w-full lg:flex-1 text-left">
+                        <span class="inline-block px-4 py-2 rounded-full bg-sc-orange/10 border border-sc-orange/20 text-sc-orange text-xs font-bold mb-4 uppercase tracking-wide">
+                            Posicionamento & Performance
+                        </span>
+                        <h3 class="text-white text-2xl md:text-3xl font-black mb-4">André Albuquerque</h3>
+                        <p class="text-lg leading-relaxed text-sc-light">André vai lapidar a forma como o mercado te enxerga, para que você deixe de ser comparado pelo preço e seja desejado como a única solução premium.</p>
+                    </div>
+                </div>
+
+                <div class="group flex flex-col lg:flex-row-reverse items-center gap-10 lg:gap-14 p-8 md:p-10 rounded-[32px] bg-gradient-to-br from-sc-161/80 to-sc-141/80 border border-sc-313/80 backdrop-blur hover:border-sc-orange/30 transition-all duration-300 hover:shadow-[0_25px_60px_-15px_rgba(0,0,0,0.4)]">
+                    <div class="w-full lg:w-[340px] flex-shrink-0">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1376&auto=format&fit=crop" 
+                             class="w-full aspect-[4/5] object-cover rounded-2xl ring-2 ring-sc-313/50 shadow-2xl group-hover:ring-sc-orange/30 transition-all" alt="Raquel Albuquerque">
+                    </div>
+                    <div class="w-full lg:flex-1 text-left">
+                        <span class="inline-block px-4 py-2 rounded-full bg-sc-orange/10 border border-sc-orange/20 text-sc-orange text-xs font-bold mb-4 uppercase tracking-wide">
+                            Conteúdo & Vendas com IA
+                        </span>
+                        <h3 class="text-white text-2xl md:text-3xl font-black mb-4">Raquel Albuquerque</h3>
+                        <p class="text-lg leading-relaxed text-sc-light">A mestra em transformar seguidores em clientes. Raquel entrega processos validados para criar conteúdos que geram autoridade instantânea.</p>
+                    </div>
+                </div>
+
+                <div class="group flex flex-col lg:flex-row items-center gap-10 lg:gap-14 p-8 md:p-10 rounded-[32px] bg-gradient-to-br from-sc-161/80 to-sc-141/80 border border-sc-313/80 backdrop-blur hover:border-sc-orange/30 transition-all duration-300 hover:shadow-[0_25px_60px_-15px_rgba(0,0,0,0.4)]">
+                    <div class="w-full lg:w-[340px] flex-shrink-0">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1374&auto=format&fit=crop" 
+                             class="w-full aspect-[4/5] object-cover rounded-2xl ring-2 ring-sc-313/50 shadow-2xl group-hover:ring-sc-orange/30 transition-all" alt="Rafael Tonietto">
+                    </div>
+                    <div class="w-full lg:flex-1 text-left">
+                        <span class="inline-block px-4 py-2 rounded-full bg-sc-orange/10 border border-sc-orange/20 text-sc-orange text-xs font-bold mb-4 uppercase tracking-wide">
+                            Estrategista de Lançamentos
+                        </span>
+                        <h3 class="text-white text-2xl md:text-3xl font-black mb-4">Rafael Tonietto</h3>
+                        <p class="text-lg leading-relaxed text-sc-light">A mente tática por trás de faturamentos explosivos. Ele constrói o mapa das suas campanhas de vendas para garantir picos de caixa previsíveis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resultados" class="relative py-28 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-sc-141 via-sc-161 to-sc-111"></div>
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-sc-orange/10 rounded-full blur-[140px] -translate-y-1/2 translate-x-1/2"></div>
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
+            <div class="text-left">
+                <span class="inline-block text-sc-orange/90 text-xs font-bold uppercase tracking-widest mb-4">Prova social</span>
+                <h2 class="text-white text-3xl md:text-5xl font-black mb-6 tracking-tight">Resultados que <span class="text-sc-orange">Falam</span></h2>
+                <p class="text-sc-light text-lg mb-10">De seguidores perdidos a consultorias lotadas.</p>
+                <ul class="space-y-5">
+                    <li class="flex items-start gap-4 p-4 rounded-2xl bg-sc-161/50 border border-sc-313/50">
+                        <span class="flex-shrink-0 w-10 h-10 rounded-xl bg-sc-orange/20 flex items-center justify-center mt-0.5">
+                            <i class="fa-solid fa-check text-sc-orange"></i>
+                        </span>
+                        <p class="text-white font-medium">Faturamento constante com produtos próprios.</p>
+                    </li>
+                    <li class="flex items-start gap-4 p-4 rounded-2xl bg-sc-161/50 border border-sc-313/50">
+                        <span class="flex-shrink-0 w-10 h-10 rounded-xl bg-sc-orange/20 flex items-center justify-center mt-0.5">
+                            <i class="fa-solid fa-check text-sc-orange"></i>
+                        </span>
+                        <p class="text-white font-medium">Agenda de presencial com fila de espera.</p>
+                    </li>
+                    <li class="flex items-start gap-4 p-4 rounded-2xl bg-sc-161/50 border border-sc-313/50">
+                        <span class="flex-shrink-0 w-10 h-10 rounded-xl bg-sc-orange/20 flex items-center justify-center mt-0.5">
+                            <i class="fa-solid fa-check text-sc-orange"></i>
+                        </span>
+                        <p class="text-white font-medium">Vendas de consultoria online pelo mundo inteiro.</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="relative group">
+                <div class="absolute -inset-1 bg-gradient-to-br from-sc-orange/20 to-sc-purple/20 rounded-[28px] blur opacity-40 group-hover:opacity-70 transition-opacity"></div>
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1470&auto=format&fit=crop" class="relative w-full rounded-3xl border border-sc-313/80 shadow-2xl ring-1 ring-white/5" alt="Dashboard de Vendas">
+            </div>
+        </div>
+    </section>
+
+    <section id="oferta" class="relative py-32 bg-sc-111 overflow-hidden text-center">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_0%,rgba(255,100,50,0.08),transparent)]"></div>
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <span class="inline-block text-sc-gray text-xs font-bold uppercase tracking-widest mb-4">Última chance</span>
+            <h2 class="text-white text-4xl md:text-6xl font-black mb-6 tracking-tighter">Condições de <span class="text-sc-orange">Entrada</span></h2>
+            
+            <div class="relative mt-16 group">
+                <div class="absolute -inset-px bg-gradient-to-b from-sc-orange/40 via-sc-orange/10 to-transparent rounded-[44px] opacity-60 group-hover:opacity-100 transition-opacity"></div>
+                <div class="relative bg-gradient-to-b from-sc-161 to-sc-141 p-12 md:p-20 rounded-[42px] border border-sc-313/80 shadow-2xl">
+                    <div class="flex flex-wrap items-center justify-center gap-3 mb-6">
+                        <span class="text-sc-gray line-through text-lg font-medium">Valor Padrão: R$ 8.997,00</span>
+                        <span class="px-3 py-1 rounded-full bg-sc-orange/20 text-sc-orange text-xs font-bold uppercase">-44%</span>
+                    </div>
+                    <span class="block text-sc-orange text-sm font-bold uppercase tracking-widest mb-6">Condição especial para esta turma</span>
+                    
+                    <div class="text-white text-6xl md:text-8xl font-black mb-2 tracking-tighter">
+                        <span class="text-sc-orange text-3xl md:text-4xl align-top mr-1">R$</span>4.997,00
+                    </div>
+                    <p class="text-sc-gray mb-10">Ou em até 12x no cartão de crédito.</p>
+
+                    <a href="#" class="btn-glow animate-shine inline-flex items-center justify-center gap-2 bg-sc-orange text-white text-xl font-black py-6 px-12 rounded-xl uppercase tracking-widest transition-all hover:scale-[1.02] active:scale-[0.98]">
+                        Fazer Inscrição Agora <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    
+                    <p class="mt-8 text-sc-gray text-xs font-bold uppercase tracking-widest flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-lock text-sc-orange/80"></i> Ambiente 100% Seguro
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black py-20 border-t border-sc-161 text-center">
+        <div class="max-w-7xl mx-auto px-6">
+            <a href="#" class="text-3xl font-black text-white tracking-tighter mb-10 inline-block">
+                <i class="fa-solid fa-arrow-trend-up text-sc-orange"></i> SCALA
+            </a>
+            
+            <div class="flex justify-center gap-12 mb-12">
+                <a href="#" class="text-sc-gray hover:text-sc-orange text-2xl transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="text-sc-gray hover:text-sc-orange text-2xl transition-colors"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" class="text-sc-gray hover:text-sc-orange text-2xl transition-colors"><i class="fa-brands fa-spotify"></i></a>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-8 mb-12">
+                <a href="#" class="text-xs font-bold uppercase tracking-widest text-sc-gray hover:text-white underline">Termos de Uso</a>
+                <a href="#" class="text-xs font-bold uppercase tracking-widest text-sc-gray hover:text-white underline">Privacidade</a>
+                <a href="#" class="text-xs font-bold uppercase tracking-widest text-sc-gray hover:text-white underline">Aviso Legal</a>
+            </div>
+
+            <p class="text-[10px] text-sc-313 max-w-2xl mx-auto leading-relaxed uppercase font-bold tracking-widest">
+                Copyright © 2026. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
