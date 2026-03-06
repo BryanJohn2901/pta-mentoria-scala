@@ -64,10 +64,10 @@
             animation: shine 3s infinite;
         }
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(24px); }
+            from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        .animate-fade-in-up { animation: fadeInUp 0.7s ease-out forwards; }
+        .animate-fade-in-up { animation: fadeInUp 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
         .ani-delay-1 { animation-delay: 0.1s; }
         .ani-delay-2 { animation-delay: 0.2s; }
         .ani-delay-3 { animation-delay: 0.3s; }
@@ -75,15 +75,15 @@
         /* Revelação ao scroll */
         .animate-on-scroll {
             opacity: 0;
-            transform: translateY(32px);
-            transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+            transform: translateY(28px);
+            transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
         }
         .in-view .animate-on-scroll { opacity: 1; transform: translateY(0); }
-        .scroll-reveal-left { opacity: 0; transform: translateX(-40px); transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1); }
+        .scroll-reveal-left { opacity: 0; transform: translateX(-36px); transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
         .in-view .scroll-reveal-left { opacity: 1; transform: translateX(0); }
-        .scroll-reveal-right { opacity: 0; transform: translateX(40px); transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1); }
+        .scroll-reveal-right { opacity: 0; transform: translateX(36px); transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
         .in-view .scroll-reveal-right { opacity: 1; transform: translateX(0); }
-        .scroll-reveal-scale { opacity: 0; transform: scale(0.92); transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1); }
+        .scroll-reveal-scale { opacity: 0; transform: scale(0.94); transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1); }
         .in-view .scroll-reveal-scale { opacity: 1; transform: scale(1); }
         
         /* Atrasos em cascata */
@@ -167,10 +167,10 @@
 
 <body class="bg-sc-111 text-sc-light antialiased" style="font-family: 'Inter', sans-serif;">
 
-    <section id="hero" class="relative min-h-[100vh] flex flex-col justify-center py-20 overflow-hidden bg-sc-111">
+    <section id="hero" class="relative min-h-[100vh] flex flex-col justify-center py-20 pb-32 md:pb-20 overflow-hidden bg-sc-111">
         <div id="hero-parallax" class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1920&auto=format&fit=crop" 
-                 class="w-full h-full object-cover object-center opacity-80" alt="" aria-hidden="true">
+            <img src="img/bgHero.webp" alt="" aria-hidden="true" class="hidden md:block w-full h-full object-cover object-center opacity-90">
+            <img src="img/bgHeroMobile.webp" alt="" aria-hidden="true" class="block md:hidden w-full h-full object-cover object-center opacity-90">
             <div class="absolute inset-0 bg-gradient-to-r from-sc-111 via-sc-111/90 to-sc-111/40"></div>
         </div>
         <div class="absolute top-[20%] left-0 w-[800px] h-[600px] bg-sc-orange/15 rounded-full blur-[120px] pointer-events-none z-[1]"></div>
@@ -180,19 +180,19 @@
                 <img src="img/logo.svg" alt="SCALA" class="h-14 md:h-16 w-auto">
             </div>
 
-            <div class="w-full md:max-w-[65%]">
+            <div class="w-full md:max-w-[52%] lg:max-w-[48%]">
                 <span class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-sc-161/90 backdrop-blur border border-sc-313 text-sc-orange text-xs font-bold uppercase tracking-widest mb-8 shadow-xl animate-fade-in-up opacity-0">
-                    <i class="fa-solid fa-medal"></i> Mentoria Scala Fitness
+                    <i class="fa-solid fa-medal"></i> Mentoria SCALA FITNESS
                 </span>
                 <h1 class="text-white text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] mb-8 animate-fade-in-up ani-delay-1 opacity-0">
-                    O Domínio para se Tornar o <span class="text-sc-orange">Treinador Mais Procurado</span> do Digital.
+                    Do Instagram ao Faturamento: O Caminho para se Tornar o <span class="text-sc-orange">Treinador Mais Procurado</span> da Sua Cidade.
                 </h1>
                 <p class="text-sc-light text-base md:text-xl max-w-2xl mb-12 leading-relaxed animate-fade-in-up ani-delay-2 opacity-0 font-light">
-                    O ecossistema exato de conteúdo, vendas e posicionamento premium para você transformar seguidores em clientes de alto valor — mesmo começando do zero.
+                    Uma mentoria feita por quem vive o jogo do fitness e fatura alto no digital. O ecossistema exato de conteúdo, vendas e posicionamento premium para transformar seguidores em clientes de alto valor — mesmo que você comece do zero.
                 </p>
                 <div class="flex flex-col items-start gap-6 animate-fade-in-up ani-delay-3 opacity-0">
                     <a href="#oferta" class="open-popup magnetic-btn btn-glow animate-shine bg-sc-orange text-white text-base md:text-lg font-black px-12 py-5 rounded-xl uppercase tracking-tight inline-flex items-center gap-3 shadow-2xl">
-                        Fazer Inscrição Agora <i class="fa-solid fa-arrow-right"></i>
+                        FAZER INSCRIÇÃO AGORA <i class="fa-solid fa-arrow-right"></i>
                     </a>
                     <div class="flex items-center gap-2 text-sm font-medium text-sc-gray bg-sc-161/50 backdrop-blur px-4 py-2 rounded-lg border border-sc-313/50">
                         <i class="fa-solid fa-circle-exclamation text-sc-orange"></i>
@@ -219,16 +219,16 @@
                     </h2>
                     <div class="space-y-5 text-sc-light text-lg text-left flex-grow">
                         <p class="leading-relaxed">A verdade nua e crua: os melhores profissionais não são, necessariamente, os mais ricos.</p>
-                        <p class="leading-relaxed">Você domina a biomecânica, mas continua com a agenda travada e a conta bancária estagnada enquanto "treinadores medianos" faturam alto.</p>
+                        <p class="leading-relaxed">Você domina a biomecânica, sabe montar treinos, conhece protocolo. Mas continua com a agenda travada, dependendo de indicação e com a conta bancária estagnada — enquanto "treinadores medianos" faturam alto todos os dias.</p>
                     </div>
                     <div class="mt-8 p-6 rounded-2xl bg-sc-161/80 backdrop-blur border border-sc-313/80 flex gap-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]">
                         <span class="flex-shrink-0 w-10 h-10 rounded-xl bg-sc-orange/20 flex items-center justify-center">
                             <i class="fa-solid fa-triangle-exclamation text-sc-orange"></i>
                         </span>
-                        <p class="text-white font-medium italic text-left">Eles dominaram o "jogo do digital", algo que nunca te ensinaram na faculdade.</p>
+                        <p class="text-white font-medium italic text-left">Eles dominaram o jogo do digital. Algo que nunca te ensinaram na faculdade.</p>
                     </div>
                     <a href="#oferta" class="open-popup magnetic-btn mt-8 inline-flex items-center gap-2 bg-sc-orange/90 text-white text-sm font-bold px-6 py-3 rounded-lg uppercase w-fit">
-                        Quero minha vaga <i class="fa-solid fa-arrow-right"></i>
+                        QUERO MINHA VAGA <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
 
@@ -238,14 +238,14 @@
                             <span class="w-12 h-12 rounded-xl bg-sc-orange/20 flex items-center justify-center">
                                 <i class="fa-solid fa-key text-sc-orange text-xl"></i>
                             </span>
-                            <h3 class="text-white text-2xl font-black">A Virada de Chave</h3>
+                            <h3 class="text-white text-2xl font-black leading-tight">Chega de implorar por alunos ou dar desconto na sua hora-aula.</h3>
                         </div>
                         <div class="space-y-5 text-sc-light leading-relaxed text-left">
-                            <p>Chega de implorar por alunos ou dar descontos na sua hora-aula. A <span class="text-white font-bold text-sc-orange">Mentoria SCALA</span> é o seu passaporte para sair da estagnação.</p>
-                            <p>Uma metodologia construída por quem vive as trincheiras e sabe como atrair o público certo e vender todos os dias.</p>
+                            <p>A <span class="text-white font-bold text-sc-orange">Mentoria SCALA</span> é o seu passaporte para sair da estagnação. Uma metodologia construída por quem vive as trincheiras — e sabe exatamente como atrair o público certo e vender todos os dias com clareza e estratégia.</p>
+                            <p>Garanta sua vaga na próxima turma e receba mais de R$10 mil em conhecimento e estratégias por um valor especial de lançamento.</p>
                         </div>
                         <a href="#oferta" class="open-popup mt-6 inline-flex items-center gap-2 border border-sc-orange text-sc-orange hover:bg-sc-orange hover:text-white text-sm font-bold px-6 py-3 rounded-lg uppercase transition-colors w-fit">
-                            Garantir vaga <i class="fa-solid fa-arrow-right"></i>
+                            GARANTIR VAGA <i class="fa-solid fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
@@ -257,7 +257,7 @@
         <div class="absolute top-1/2 left-0 w-96 h-96 bg-sc-orange/5 rounded-full blur-[120px] -translate-y-1/2 -translate-x-1/2"></div>
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="text-center mb-20 animate-on-scroll">
-                <span class="inline-block text-sc-gray text-xs font-bold uppercase tracking-widest mb-4">Conteúdo</span>
+                <span class="inline-block text-sc-gray text-xs font-bold uppercase tracking-widest mb-4">O passo a passo da SCALA para dominar o mercado fitness:</span>
                 <h2 class="text-white text-3xl md:text-5xl font-black tracking-tight">O QUE VOCÊ VAI <span class="text-sc-orange">APRENDER</span></h2>
             </div>
             
@@ -267,7 +267,7 @@
                         <i class="fa-solid fa-bullhorn text-sc-orange group-hover:text-white text-xl transition-colors duration-300"></i>
                     </div>
                     <h3 class="text-white text-xl font-bold mb-3 group-hover:text-sc-orange transition-colors duration-300">Conteúdo que Converte</h3>
-                    <p class="text-sm leading-relaxed text-sc-gray">Domine a arte de transformar seguidores em fãs e compradores ativos.</p>
+                    <p class="text-sm leading-relaxed text-sc-gray">Como criar vídeos curtos, usar roteiros virais e ativar gatilhos de venda nos comentários para transformar seguidores em compradores ativos.</p>
                 </div>
                 
                 <div class="spotlight-card rounded-3xl p-8 md:p-10 text-left animate-on-scroll scroll-delay-2 group">
@@ -275,7 +275,7 @@
                         <i class="fa-solid fa-rocket text-sc-orange group-hover:text-white text-xl transition-colors duration-300"></i>
                     </div>
                     <h3 class="text-white text-xl font-bold mb-3 group-hover:text-sc-orange transition-colors duration-300">Estratégias de Lançamento</h3>
-                    <p class="text-sm leading-relaxed text-sc-gray">Execute campanhas de alta lucratividade para suas consultorias.</p>
+                    <p class="text-sm leading-relaxed text-sc-gray">Desafios, fórmulas, funis e campanhas para executar lançamentos de alta lucratividade com suas consultorias e mentorias premium.</p>
                 </div>
                 
                 <div class="spotlight-card rounded-3xl p-8 md:p-10 text-left animate-on-scroll scroll-delay-3 group">
@@ -283,13 +283,37 @@
                         <i class="fa-solid fa-arrows-spin text-sc-orange group-hover:text-white text-xl transition-colors duration-300"></i>
                     </div>
                     <h3 class="text-white text-xl font-bold mb-3 group-hover:text-sc-orange transition-colors duration-300">Vendas no Automático</h3>
-                    <p class="text-sm leading-relaxed text-sc-gray">Implemente funis que vendem seus serviços 24 horas por dia.</p>
+                    <p class="text-sm leading-relaxed text-sc-gray">Estrutura de funil, automação e inteligência artificial para vender seus serviços 24 horas por dia — enquanto você treina, dorme ou viaja.</p>
+                </div>
+
+                <div class="spotlight-card rounded-3xl p-8 md:p-10 text-left animate-on-scroll scroll-delay-1 group">
+                    <div class="w-14 h-14 flex items-center justify-center rounded-2xl bg-sc-orange/10 border border-sc-orange/20 mb-6 group-hover:bg-sc-orange group-hover:border-sc-orange group-hover:scale-110 transition-all duration-400">
+                        <i class="fa-solid fa-brain text-sc-orange group-hover:text-white text-xl transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-white text-xl font-bold mb-3 group-hover:text-sc-orange transition-colors duration-300">Mentalidade Empreendedora</h3>
+                    <p class="text-sm leading-relaxed text-sc-gray">Alta performance, gestão emocional e visão de longo prazo para construir um negócio real, não apenas uma renda temporária.</p>
+                </div>
+
+                <div class="spotlight-card rounded-3xl p-8 md:p-10 text-left animate-on-scroll scroll-delay-2 group">
+                    <div class="w-14 h-14 flex items-center justify-center rounded-2xl bg-sc-orange/10 border border-sc-orange/20 mb-6 group-hover:bg-sc-orange group-hover:border-sc-orange group-hover:scale-110 transition-all duration-400">
+                        <i class="fa-solid fa-cubes text-sc-orange group-hover:text-white text-xl transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-white text-xl font-bold mb-3 group-hover:text-sc-orange transition-colors duration-300">Criação e Escala de Produtos</h3>
+                    <p class="text-sm leading-relaxed text-sc-gray">De aulas a programas completos que vendem sem você precisar aparecer todos os dias.</p>
+                </div>
+
+                <div class="spotlight-card rounded-3xl p-8 md:p-10 text-left animate-on-scroll scroll-delay-3 group">
+                    <div class="w-14 h-14 flex items-center justify-center rounded-2xl bg-sc-orange/10 border border-sc-orange/20 mb-6 group-hover:bg-sc-orange group-hover:border-sc-orange group-hover:scale-110 transition-all duration-400">
+                        <i class="fa-solid fa-users-gear text-sc-orange group-hover:text-white text-xl transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-white text-xl font-bold mb-3 group-hover:text-sc-orange transition-colors duration-300">Gestão de Equipe de Vendas</h3>
+                    <p class="text-sm leading-relaxed text-sc-gray">Scripts prontos, modelo de closers e estrutura de alta conversão para escalar sem depender só de você.</p>
                 </div>
             </div>
 
             <div class="text-center mt-14">
                 <a href="#oferta" class="open-popup magnetic-btn btn-glow inline-flex items-center gap-2 bg-sc-orange text-white font-bold px-8 py-4 rounded-xl uppercase text-sm">
-                    Acessar conteúdo completo <i class="fa-solid fa-arrow-right"></i>
+                    ACESSAR CONTEÚDO COMPLETO <i class="fa-solid fa-arrow-right"></i>
                 </a>
             </div>
         </div>
@@ -299,7 +323,6 @@
         <div class="absolute inset-0 bg-gradient-to-b from-sc-f5 to-white"></div>
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="text-center mb-20 animate-on-scroll">
-                <span class="inline-block text-sc-313 text-xs font-bold uppercase tracking-widest mb-4">Como funciona</span>
                 <h2 class="text-sc-111 text-3xl md:text-5xl font-black tracking-tight">FORMATO DA <span class="text-sc-orange">MENTORIA</span></h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -307,34 +330,34 @@
                     <span class="inline-flex w-14 h-14 items-center justify-center rounded-2xl bg-sc-orange/10 text-sc-orange mb-6 group-hover:bg-sc-orange group-hover:text-white group-hover:scale-110 transition-all duration-400">
                         <i class="fa-solid fa-calendar-check text-2xl"></i>
                     </span>
-                    <h3 class="text-sc-111 text-lg font-bold mb-3 group-hover:text-sc-orange transition-colors duration-300">Encontros ao vivo</h3>
-                    <p class="text-sc-313 text-sm leading-relaxed">Aulas quinzenais com os mentores para ajustes de rota e direcionamento.</p>
+                    <h3 class="text-sc-111 text-lg font-bold mb-3 group-hover:text-sc-orange transition-colors duration-300">Encontros ao Vivo</h3>
+                    <p class="text-sc-313 text-sm leading-relaxed">Aulas quinzenais com os maiores nomes do mercado para ajustes de rota e direcionamento estratégico.</p>
                 </div>
                 <div class="group bg-white p-8 rounded-3xl border border-gray-100 text-left shadow-lg animate-on-scroll scroll-delay-2 shadow-black/5 hover:shadow-2xl hover:shadow-sc-orange/15 hover:-translate-y-2 hover:border-sc-orange/30 transition-all duration-400 hover-card">
                     <span class="inline-flex w-14 h-14 items-center justify-center rounded-2xl bg-sc-orange/10 text-sc-orange mb-6 group-hover:bg-sc-orange group-hover:text-white group-hover:scale-110 transition-all duration-400">
                         <i class="fa-brands fa-whatsapp text-2xl"></i>
                     </span>
                     <h3 class="text-sc-111 text-lg font-bold mb-3 group-hover:text-sc-orange transition-colors duration-300">Suporte de Elite</h3>
-                    <p class="text-sc-313 text-sm leading-relaxed">Grupo exclusivo de networking com os maiores nomes do mercado.</p>
+                    <p class="text-sc-313 text-sm leading-relaxed">Grupo exclusivo no WhatsApp com networking e suporte diário dos mentores e da comunidade.</p>
                 </div>
                 <div class="group bg-white p-8 rounded-3xl border border-gray-100 text-left shadow-lg animate-on-scroll scroll-delay-3 shadow-black/5 hover:shadow-2xl hover:shadow-sc-orange/15 hover:-translate-y-2 hover:border-sc-orange/30 transition-all duration-400 hover-card">
                     <span class="inline-flex w-14 h-14 items-center justify-center rounded-2xl bg-sc-orange/10 text-sc-orange mb-6 group-hover:bg-sc-orange group-hover:text-white group-hover:scale-110 transition-all duration-400">
                         <i class="fa-solid fa-user-doctor text-2xl"></i>
                     </span>
                     <h3 class="text-sc-111 text-lg font-bold mb-3 group-hover:text-sc-orange transition-colors duration-300">Raio-X Individual</h3>
-                    <p class="text-sc-313 text-sm leading-relaxed">Sessões estratégicas focadas no seu modelo de negócio específico.</p>
+                    <p class="text-sc-313 text-sm leading-relaxed">Sessões estratégicas focadas no seu modelo de negócio específico — ajustes personalizados para o seu momento.</p>
                 </div>
                 <div class="group bg-white p-8 rounded-3xl border border-gray-100 text-left shadow-lg animate-on-scroll scroll-delay-4 shadow-black/5 hover:shadow-2xl hover:shadow-sc-orange/15 hover:-translate-y-2 hover:border-sc-orange/30 transition-all duration-400 hover-card">
                     <span class="inline-flex w-14 h-14 items-center justify-center rounded-2xl bg-sc-orange/10 text-sc-orange mb-6 group-hover:bg-sc-orange group-hover:text-white group-hover:scale-110 transition-all duration-400">
                         <i class="fa-solid fa-users text-2xl"></i>
                     </span>
                     <h3 class="text-sc-111 text-lg font-bold mb-3 group-hover:text-sc-orange transition-colors duration-300">Imersão Presencial</h3>
-                    <p class="text-sc-313 text-sm leading-relaxed">Eventos focados em networking e construção de parcerias de alto valor.</p>
+                    <p class="text-sc-313 text-sm leading-relaxed">Dois encontros presenciais para networking, construção de parcerias de alto valor e alinhamento de rota.</p>
                 </div>
             </div>
             <div class="text-center mt-14">
                 <a href="#oferta" class="open-popup magnetic-btn inline-flex items-center gap-2 bg-sc-orange text-white font-bold px-8 py-4 rounded-xl uppercase text-sm border-2 border-sc-orange">
-                    Ver condições <i class="fa-solid fa-arrow-right"></i>
+                    VER CONDIÇÕES <i class="fa-solid fa-arrow-right"></i>
                 </a>
             </div>
         </div>
@@ -346,12 +369,16 @@
         </div>
         
         <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16 animate-on-scroll">
+                <h2 class="text-white text-3xl md:text-5xl font-black tracking-tight">Conheça quem vai guiar seu <span class="text-sc-orange">crescimento.</span></h2>
+            </div>
+
             <div class="space-y-32 lg:space-y-24 mt-10">
                 
                 <div class="relative w-full mx-auto animate-on-scroll scroll-delay-1">
                     <div class="bg-sc-darkcard rounded-[32px] border border-white/[0.03] p-8 pt-64 lg:p-14 lg:pl-[440px] relative flex flex-col justify-center min-h-[440px] shadow-2xl hover-mentor-card transition-all duration-500">
                         <div class="absolute top-0 left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-[-32px] lg:top-1/2 lg:-translate-y-1/2 w-[calc(100%-64px)] lg:w-[400px] h-[360px] lg:h-[500px] rounded-[24px] overflow-hidden shadow-2xl -mt-16 lg:mt-0 z-10 border border-white/5 group bg-black">
-                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1374&auto=format&fit=crop" class="w-full h-full object-cover grayscale opacity-90 hover-mentor-img" alt="André Albuquerque">
+                            <img src="img/andre.webp" class="w-full h-full object-cover grayscale opacity-90 hover-mentor-img" alt="André Albuquerque">
                             <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent opacity-90"></div>
                             
                             <div class="absolute bottom-6 left-6 flex flex-col transform -skew-x-6">
@@ -362,16 +389,16 @@
 
                         <div class="relative z-10 text-left lg:ml-4">
                             <span class="inline-flex items-center px-4 py-1.5 rounded-full border border-[#302055] bg-[#16102E] text-[#9D84D6] text-[10px] font-bold uppercase tracking-widest mb-6">
-                                Mestre em Biomecânica
+                                Posicionamento e Performance
                             </span>
                             
                             <h3 class="text-white text-3xl md:text-4xl font-bold mb-6 tracking-tight">André Albuquerque</h3>
                             
                             <p class="text-sc-textgray text-base leading-relaxed mb-4">
-                                Professor de Educação Física e Mestre em Biomecânica, conecta com mais de <strong class="text-white font-medium">200 mil pessoas</strong> em suas redes sociais.
+                                Professor de Educação Física e Mestre em Biomecânica. Conecta com mais de <strong class="text-white font-medium">200 mil pessoas</strong> nas redes sociais e já formou mais de <strong class="text-white font-medium">23 mil alunos</strong>.
                             </p>
                             <p class="text-sc-textgray text-base leading-relaxed mb-8">
-                                Com mais de <strong class="text-white font-medium">23 mil alunos formados</strong>, André dedica sua carreira a ensinar a Biomecânica na prática.
+                                Dedica sua carreira a ensinar biomecânica na prática, sendo a referência em Posicionamento e Performance de Treinadores de Elite.
                             </p>
                             
                             <div class="h-[1px] w-full bg-white/[0.05] mb-8"></div>
@@ -394,49 +421,7 @@
                 <div class="relative w-full mx-auto animate-on-scroll scroll-delay-2">
                     <div class="bg-sc-darkcard rounded-[32px] border border-white/[0.03] p-8 pt-64 lg:p-14 lg:pl-[440px] relative flex flex-col justify-center min-h-[440px] shadow-2xl hover-mentor-card transition-all duration-500">
                         <div class="absolute top-0 left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-[-32px] lg:top-1/2 lg:-translate-y-1/2 w-[calc(100%-64px)] lg:w-[400px] h-[360px] lg:h-[500px] rounded-[24px] overflow-hidden shadow-2xl -mt-16 lg:mt-0 z-10 border border-white/5 group bg-black">
-                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1376&auto=format&fit=crop" class="w-full h-full object-cover grayscale opacity-90 hover-mentor-img" alt="Raquel Albuquerque">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent opacity-90"></div>
-                            <div class="absolute bottom-6 left-6 flex flex-col transform -skew-x-6">
-                                <span class="text-white font-black italic text-[2.5rem] leading-[0.9] tracking-tight uppercase">RAQUEL</span>
-                                <span class="text-white font-black italic text-[2.5rem] leading-[0.9] tracking-tight uppercase">ALBUQUERQUE</span>
-                            </div>
-                        </div>
-
-                        <div class="relative z-10 text-left lg:ml-4">
-                            <span class="inline-flex items-center px-4 py-1.5 rounded-full border border-[#552718] bg-[#2E160D] text-[#E88E6A] text-[10px] font-bold uppercase tracking-widest mb-6">
-                                Conteúdo & Vendas com IA
-                            </span>
-                            
-                            <h3 class="text-white text-3xl md:text-4xl font-bold mb-6 tracking-tight">Raquel Albuquerque</h3>
-                            
-                            <p class="text-sc-textgray text-base leading-relaxed mb-4">
-                                A mestra em transformar seguidores em clientes. Raquel entrega processos validados para criar <strong class="text-white font-medium">conteúdos que geram autoridade</strong> instantânea.
-                            </p>
-                            <p class="text-sc-textgray text-base leading-relaxed mb-8">
-                                Com foco em conversão e inteligência artificial, ela otimiza seu tempo e <strong class="text-white font-medium">maximiza seus lucros</strong>.
-                            </p>
-                            
-                            <div class="h-[1px] w-full bg-white/[0.05] mb-8"></div>
-                            
-                            <div class="flex items-center gap-10">
-                                <div>
-                                    <div class="text-white text-2xl font-bold mb-1 tracking-tight">150k+</div>
-                                    <div class="text-[#6B7280] text-[9px] uppercase tracking-[0.2em] font-semibold">Seguidores</div>
-                                </div>
-                                <div class="w-[1px] h-10 bg-white/[0.05]"></div>
-                                <div>
-                                    <div class="text-white text-2xl font-bold mb-1 tracking-tight">10k+</div>
-                                    <div class="text-[#6B7280] text-[9px] uppercase tracking-[0.2em] font-semibold">Alunos</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="relative w-full mx-auto animate-on-scroll scroll-delay-3">
-                    <div class="bg-sc-darkcard rounded-[32px] border border-white/[0.03] p-8 pt-64 lg:p-14 lg:pl-[440px] relative flex flex-col justify-center min-h-[440px] shadow-2xl hover-mentor-card transition-all duration-500">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-[-32px] lg:top-1/2 lg:-translate-y-1/2 w-[calc(100%-64px)] lg:w-[400px] h-[360px] lg:h-[500px] rounded-[24px] overflow-hidden shadow-2xl -mt-16 lg:mt-0 z-10 border border-white/5 group bg-black">
-                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1374&auto=format&fit=crop" class="w-full h-full object-cover grayscale opacity-90 hover-mentor-img" alt="Rafael Tonietto">
+                            <img src="img/rafael.webp" class="w-full h-full object-cover grayscale opacity-90 hover-mentor-img" alt="Rafael Tonietto">
                             <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent opacity-90"></div>
                             <div class="absolute bottom-6 left-6 flex flex-col transform -skew-x-6">
                                 <span class="text-white font-black italic text-[2.5rem] leading-[0.9] tracking-tight uppercase">RAFAEL</span>
@@ -452,10 +437,10 @@
                             <h3 class="text-white text-3xl md:text-4xl font-bold mb-6 tracking-tight">Rafael Tonietto</h3>
                             
                             <p class="text-sc-textgray text-base leading-relaxed mb-4">
-                                A mente tática por trás de faturamentos explosivos. Ele constrói o mapa das suas campanhas de vendas para garantir <strong class="text-white font-medium">picos de caixa previsíveis</strong>.
+                                A mente tática por trás de faturamentos explosivos. Ele constrói o mapa das campanhas de vendas para garantir <strong class="text-white font-medium">picos de caixa previsíveis</strong>.
                             </p>
                             <p class="text-sc-textgray text-base leading-relaxed mb-8">
-                                Especialista em engenharia de vendas, Rafael transforma audiência em <strong class="text-white font-medium">clientes de alto ticket</strong>.
+                                Transforma a sua audiência em <strong class="text-white font-medium">clientes de alto ticket</strong> com estratégias sólidas de lançamento.
                             </p>
                             
                             <div class="h-[1px] w-full bg-white/[0.05] mb-8"></div>
@@ -475,7 +460,71 @@
                     </div>
                 </div>
 
+                <div class="relative w-full mx-auto animate-on-scroll scroll-delay-3">
+                    <div class="bg-sc-darkcard rounded-[32px] border border-white/[0.03] p-8 pt-64 lg:p-14 lg:pl-[440px] relative flex flex-col justify-center min-h-[440px] shadow-2xl hover-mentor-card transition-all duration-500">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-[-32px] lg:top-1/2 lg:-translate-y-1/2 w-[calc(100%-64px)] lg:w-[400px] h-[360px] lg:h-[500px] rounded-[24px] overflow-hidden shadow-2xl -mt-16 lg:mt-0 z-10 border border-white/5 group bg-black">
+                            <img src="img/julio.webp" class="w-full h-full object-cover grayscale opacity-90 hover-mentor-img" alt="Julio Muniz">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent opacity-90"></div>
+                            <div class="absolute bottom-6 left-6 flex flex-col transform -skew-x-6">
+                                <span class="text-white font-black italic text-[2.5rem] leading-[0.9] tracking-tight uppercase">JULIO</span>
+                                <span class="text-white font-black italic text-[2.5rem] leading-[0.9] tracking-tight uppercase">MUNIZ</span>
+                            </div>
+                        </div>
+
+                        <div class="relative z-10 text-left lg:ml-4">
+                            <span class="inline-flex items-center px-4 py-1.5 rounded-full border border-[#552718] bg-[#2E160D] text-[#E88E6A] text-[10px] font-bold uppercase tracking-widest mb-6">
+                                Monetização Automatizada
+                            </span>
+                            
+                            <h3 class="text-white text-3xl md:text-4xl font-bold mb-6 tracking-tight">Julio Muniz</h3>
+                            
+                            <p class="text-sc-textgray text-base leading-relaxed mb-4">
+                                Especialista em Funis de Vendas e Monetização Automatizada. Domina a <strong class="text-white font-medium">engenharia de funis</strong> que vendem 24h por dia.
+                            </p>
+                            <p class="text-sc-textgray text-base leading-relaxed mb-8">
+                                Transforma a sua estrutura atual de atendimentos em <strong class="text-white font-medium">renda recorrente e previsível</strong>, conectando alta performance ao crescimento do seu negócio.
+                            </p>
+                            
+                            <div class="h-[1px] w-full bg-white/[0.05] mb-8"></div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+
+            <div class="mt-24 mb-10 animate-on-scroll">
+                <div class="text-center mb-12">
+                    <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white/70 text-xs font-bold uppercase tracking-widest">Convidados de Elite</span>
+                    <h3 class="text-white text-2xl md:text-3xl font-bold mt-6 tracking-tight">Participações Especiais</h3>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-sc-darkcard rounded-3xl border border-white/[0.03] p-8 text-center shadow-lg hover-mentor-card hover:-translate-y-2 transition-all duration-500">
+                        <div class="w-20 h-20 mx-auto rounded-full bg-sc-161 border border-white/10 mb-5 flex items-center justify-center overflow-hidden">
+                            <i class="fa-solid fa-microphone text-sc-orange text-2xl"></i>
+                        </div>
+                        <h4 class="text-white font-bold text-xl mb-2">Juarez Trancoso</h4>
+                        <p class="text-sc-textgray text-sm">Mestre em vendas de alto valor.</p>
+                    </div>
+                    
+                    <div class="bg-sc-darkcard rounded-3xl border border-white/[0.03] p-8 text-center shadow-lg hover-mentor-card hover:-translate-y-2 transition-all duration-500">
+                        <div class="w-20 h-20 mx-auto rounded-full bg-sc-161 border border-white/10 mb-5 flex items-center justify-center overflow-hidden">
+                            <i class="fa-solid fa-chart-line text-sc-orange text-2xl"></i>
+                        </div>
+                        <h4 class="text-white font-bold text-xl mb-2">Odam Brito</h4>
+                        <p class="text-sc-textgray text-sm">Especialista em lançamentos digitais.</p>
+                    </div>
+                    
+                    <div class="bg-sc-darkcard rounded-3xl border border-white/[0.03] p-8 text-center shadow-lg hover-mentor-card hover:-translate-y-2 transition-all duration-500">
+                        <div class="w-20 h-20 mx-auto rounded-full bg-sc-161 border border-white/10 mb-5 flex items-center justify-center overflow-hidden">
+                            <i class="fa-solid fa-star text-sc-orange text-2xl"></i>
+                        </div>
+                        <h4 class="text-white font-bold text-xl mb-2">Vanessa</h4>
+                        <p class="text-sc-textgray text-sm">Personal trainer que fatura mais de R$200 mil por mês.</p>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </section>
 
@@ -484,31 +533,36 @@
         <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-sc-orange/10 rounded-full blur-[140px] -translate-y-1/2 translate-x-1/2"></div>
         <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
             <div class="text-left scroll-reveal-left">
-                <span class="inline-block text-sc-orange/90 text-xs font-bold uppercase tracking-widest mb-4">Prova social</span>
                 <h2 class="text-white text-3xl md:text-5xl font-black mb-6 tracking-tight">Resultados que <span class="text-sc-orange">Falam</span></h2>
-                <p class="text-sc-light text-lg mb-10">De seguidores perdidos a consultorias lotadas.</p>
+                <p class="text-sc-light text-lg mb-10">De seguidores perdidos a consultorias lotadas. Alunos que passaram pela SCALA estão hoje:</p>
                 <ul class="space-y-5">
                     <li class="flex items-start gap-4 p-4 rounded-2xl bg-sc-161/50 border border-sc-313/50 hover:bg-sc-161/70 hover:border-sc-orange/30 transition-all duration-300 group/item">
                         <span class="flex-shrink-0 w-10 h-10 rounded-xl bg-sc-orange/20 flex items-center justify-center mt-0.5 group-hover/item:bg-sc-orange/40 transition-colors duration-300">
                             <i class="fa-solid fa-check text-sc-orange"></i>
                         </span>
-                        <p class="text-white font-medium">Faturamento constante com produtos próprios.</p>
+                        <p class="text-white font-medium">Faturando acima de R$10 mil/mês com produtos próprios.</p>
                     </li>
                     <li class="flex items-start gap-4 p-4 rounded-2xl bg-sc-161/50 border border-sc-313/50 hover:bg-sc-161/70 hover:border-sc-orange/30 transition-all duration-300 group/item">
                         <span class="flex-shrink-0 w-10 h-10 rounded-xl bg-sc-orange/20 flex items-center justify-center mt-0.5 group-hover/item:bg-sc-orange/40 transition-colors duration-300">
                             <i class="fa-solid fa-check text-sc-orange"></i>
                         </span>
-                        <p class="text-white font-medium">Agenda de presencial com fila de espera.</p>
+                        <p class="text-white font-medium">Lotando agendamentos sem depender de indicação.</p>
                     </li>
                     <li class="flex items-start gap-4 p-4 rounded-2xl bg-sc-161/50 border border-sc-313/50 hover:bg-sc-161/70 hover:border-sc-orange/30 transition-all duration-300 group/item">
                         <span class="flex-shrink-0 w-10 h-10 rounded-xl bg-sc-orange/20 flex items-center justify-center mt-0.5 group-hover/item:bg-sc-orange/40 transition-colors duration-300">
                             <i class="fa-solid fa-check text-sc-orange"></i>
                         </span>
-                        <p class="text-white font-medium">Vendas de consultoria online pelo mundo inteiro.</p>
+                        <p class="text-white font-medium">Vendendo consultorias online sem precisar de milhões de seguidores.</p>
+                    </li>
+                    <li class="flex items-start gap-4 p-4 rounded-2xl bg-sc-161/50 border border-sc-313/50 hover:bg-sc-161/70 hover:border-sc-orange/30 transition-all duration-300 group/item">
+                        <span class="flex-shrink-0 w-10 h-10 rounded-xl bg-sc-orange/20 flex items-center justify-center mt-0.5 group-hover/item:bg-sc-orange/40 transition-colors duration-300">
+                            <i class="fa-solid fa-check text-sc-orange"></i>
+                        </span>
+                        <p class="text-white font-medium">Criando ecossistemas que funcionam 24h, enquanto treinam, dormem ou viajam.</p>
                     </li>
                 </ul>
                 <a href="#oferta" class="open-popup magnetic-btn mt-8 inline-flex items-center gap-2 bg-sc-orange text-white font-bold px-8 py-4 rounded-xl uppercase text-sm">
-                    Quero esses resultados <i class="fa-solid fa-arrow-right"></i>
+                    QUERO ESSES RESULTADOS <i class="fa-solid fa-arrow-right"></i>
                 </a>
             </div>
             <div class="relative group scroll-reveal-right scroll-delay-2 overflow-hidden rounded-3xl">
@@ -521,7 +575,7 @@
     <section id="oferta" class="relative py-32 bg-sc-111 overflow-hidden text-center z-10">
         <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_0%,rgba(255,100,50,0.08),transparent)]"></div>
         <div class="max-w-4xl mx-auto px-6 relative z-10">
-            <span class="inline-block text-sc-gray text-xs font-bold uppercase tracking-widest mb-4 scroll-reveal-scale">Última chance</span>
+            <span class="inline-block text-sc-orange text-xs font-bold uppercase tracking-widest mb-4 scroll-reveal-scale py-1 px-3 border border-sc-orange/30 rounded-full bg-sc-orange/10">Última chance</span>
             <h2 class="text-white text-4xl md:text-6xl font-black mb-6 tracking-tighter scroll-reveal-scale scroll-delay-1">Condições de <span class="text-sc-orange">Entrada</span></h2>
             
             <div class="relative mt-16 scroll-reveal-scale scroll-delay-2 tilt-card-wrapper">
@@ -529,11 +583,11 @@
                 
                 <div class="tilt-card relative bg-gradient-to-b from-sc-161 to-sc-141 p-12 md:p-20 rounded-[42px] border border-sc-313/80 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)] backdrop-blur">
                     <div class="tilt-card-inner">
-                        <span class="absolute top-6 right-6 md:top-8 md:right-8 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-white/90 text-[10px] font-bold uppercase tracking-widest">Condição exclusiva</span>
+                        <span class="absolute top-6 right-6 md:top-8 md:right-8 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-white/90 text-[10px] font-bold uppercase tracking-widest">Oferta</span>
                         
                         <div class="flex flex-wrap items-center justify-center gap-3 mb-6">
                             <span class="text-sc-gray line-through text-lg font-medium">Valor Padrão: R$ 8.997,00</span>
-                            <span class="px-3 py-1 rounded-full bg-sc-orange/20 text-sc-orange text-xs font-bold uppercase">-44%</span>
+                            <span class="px-3 py-1 rounded-full bg-sc-orange/20 text-sc-orange text-xs font-bold uppercase">-44% OFF</span>
                         </div>
                         
                         <span class="block text-sc-orange text-sm font-bold uppercase tracking-widest mb-6">Condição especial para esta turma</span>
@@ -542,9 +596,13 @@
                             <span class="text-sc-orange text-3xl md:text-4xl align-top mr-1">R$</span>4.997,00
                         </div>
                         <p class="text-sc-gray mb-10">Ou em até 12x no cartão de crédito.</p>
+                        
+                        <p class="text-white/80 max-w-lg mx-auto mb-10 text-sm leading-relaxed">
+                            As vagas são limitadas e a mentoria começa dia 02 de abril. Clique abaixo e fale com a equipe para garantir sua vaga agora mesmo.
+                        </p>
 
                         <a href="#oferta" class="open-popup magnetic-btn btn-glow animate-shine inline-flex items-center justify-center gap-2 bg-sc-orange text-white text-xl font-black py-6 px-12 rounded-xl uppercase tracking-widest">
-                            Fazer Inscrição Agora <i class="fa-solid fa-arrow-right"></i>
+                            FAZER INSCRIÇÃO AGORA <i class="fa-solid fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
@@ -561,8 +619,8 @@
         </div>
     </footer>
 
-    <div id="lead-popup" class="fixed inset-0 z-[9999] flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 bg-black/80 backdrop-blur-md p-4">
-        <div class="bg-sc-161 border border-sc-313 p-8 md:p-10 rounded-[28px] w-full max-w-lg shadow-[0_0_50px_rgba(255,100,50,0.15)] relative transform scale-95 transition-transform duration-300" id="popup-content">
+    <div id="lead-popup" class="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-400 ease-out" style="transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1);">
+        <div id="popup-content" class="bg-sc-161 border border-sc-313 p-8 md:p-10 rounded-[28px] w-full max-w-lg shadow-[0_0_50px_rgba(255,100,50,0.15)] relative transform scale-95 opacity-0 transition-all duration-400 ease-out" style="transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.35s cubic-bezier(0.22, 1, 0.36, 1);">
             <button id="close-popup" class="absolute top-5 right-5 w-8 h-8 flex items-center justify-center rounded-full bg-sc-141 text-sc-light hover:text-white hover:bg-sc-313 hover:scale-110 active:scale-95 transition-all duration-300">
                 <i class="fa-solid fa-xmark text-lg"></i>
             </button>
@@ -671,16 +729,22 @@
             document.querySelectorAll('.open-popup, a[href="#oferta"]').forEach(btn => {
                 btn.addEventListener('click', (e) => {
                     e.preventDefault();
-                    popup.classList.remove('opacity-0', 'pointer-events-none');
-                    popupContent.classList.remove('scale-95');
-                    popupContent.classList.add('scale-100');
+                    popup.classList.remove('pointer-events-none');
+                    popup.classList.remove('opacity-0');
+                    popupContent.classList.remove('scale-95', 'opacity-0');
+                    requestAnimationFrame(() => {
+                        popupContent.classList.add('scale-100', 'opacity-100');
+                    });
                 });
             });
 
             document.getElementById('close-popup').addEventListener('click', () => {
-                popup.classList.add('opacity-0', 'pointer-events-none');
-                popupContent.classList.remove('scale-100');
-                popupContent.classList.add('scale-95');
+                popup.classList.add('opacity-0');
+                popupContent.classList.remove('scale-100', 'opacity-100');
+                popupContent.classList.add('scale-95', 'opacity-0');
+                setTimeout(() => {
+                    popup.classList.add('pointer-events-none');
+                }, 420);
             });
 
             // 7. Lógica de Envio de Dados (Webhook + UTMs)
