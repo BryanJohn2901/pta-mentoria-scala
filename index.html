@@ -159,9 +159,12 @@
                 <span class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-sc-161/90 backdrop-blur border border-sc-313 text-sc-orange text-xs font-bold uppercase tracking-widest mb-8 shadow-xl animate-fade-in-up opacity-0">
                     <i class="fa-solid fa-medal"></i> Mentoria SCALA FITNESS
                 </span>
-                <h1 class="text-white text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] mb-8 animate-fade-in-up ani-delay-1 opacity-0">
-                    Do Instagram ao Faturamento: O Caminho para se Tornar o <span class="text-sc-orange">Treinador Mais Procurado</span> da Sua Cidade.
+                <h1 class="text-white text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] mb-8 animate-fade-in-up ani-delay-1 opacity-0 uppercase">
+                    Torne-se o treinador <span class="text-sc-orange">mais procurado</span> da sua cidade.
                 </h1>
+                <p class="text-sc-light text-base md:text-xl max-w-2xl mb-4 leading-relaxed animate-fade-in-up ani-delay-2 opacity-0 font-light mx-auto md:mx-0">
+                    Com posicionamento forte no online, vendas recorrentes e um modelo de atendimento escalável no presencial e no digital.
+                </p>
                 <p class="text-sc-light text-base md:text-xl max-w-2xl mb-12 leading-relaxed animate-fade-in-up ani-delay-2 opacity-0 font-light mx-auto md:mx-0">
                     Uma mentoria feita por quem vive o jogo do fitness e fatura alto no digital. O ecossistema exato de conteúdo, vendas e posicionamento premium para transformar seguidores em clientes de alto valor — mesmo que você comece do zero.
                 </p>
@@ -710,7 +713,7 @@
                 };
             }
 
-            document.getElementById('form-azul').addEventListener('submit', async (e) => {
+            document.getElementById('form_scala').addEventListener('submit', async (e) => {
                 e.preventDefault();
                 const submitBtn = e.target.querySelector('button[type="submit"]');
                 const originalText = submitBtn.innerHTML;
@@ -725,7 +728,7 @@
                 const utms = getUTMs();
 
                 const payload = { name, email, phone, url, ...utms };
-                const webhookUrl = 'SUA_URL_DO_WEBHOOK_MAKE_AQUI'; // <-- INSIRA SEU WEBHOOK AQUI
+                const webhookUrl = 'https://hook.us1.make.com/javkd0nkcq8w1mw1xqu7cebxjb7hdujk?produto=E-MSF-V1';
 
                 try {
                     if(webhookUrl !== 'SUA_URL_DO_WEBHOOK_MAKE_AQUI') {
@@ -737,7 +740,7 @@
                     }
 
                     const redirectString = `?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}&utm_source=${encodeURIComponent(utms.utm_source)}&utm_term=${encodeURIComponent(utms.utm_term)}&utm_campaign=${encodeURIComponent(utms.utm_campaign)}&utm_medium=${encodeURIComponent(utms.utm_medium)}&utm_content=${encodeURIComponent(utms.utm_content)}&url=${encodeURIComponent(url)}`;
-                    const checkoutUrl = 'LINK_DO_SEU_CHECKOUT_AQUI'; // <-- INSIRA SEU LINK DE PAGAMENTO AQUI
+                    const checkoutUrl = 'https://form.respondi.app/Lfs34dNa';
                     
                     window.location.href = checkoutUrl + redirectString;
                 } catch (error) {
